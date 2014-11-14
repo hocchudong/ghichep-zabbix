@@ -27,7 +27,7 @@ Sau khi cài đặt thành công, mở trình duyệt web tại địa chỉ htt
 	
 ## 2. Thêm host để giám sát
 	
-	Tham khảo [link sau](http://tecadmin.net/add-host-zabbix-server-monitor/)
+Tham khảo [link sau] (http://tecadmin.net/add-host-zabbix-server-monitor/)
 	
 ## 3. Cấu hình gửi mail cảnh báo
 
@@ -35,5 +35,5 @@ Sau khi cài đặt thành công, mở trình duyệt web tại địa chỉ htt
 	
 ## Tham khảo
 	
-    [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-install-zabbix-on-ubuntu-configure-it-to-monitor-multiple-vps-servers)
+[Digital Ocean] (https://www.digitalocean.com/community/tutorials/how-to-install-zabbix-on-ubuntu-configure-it-to-monitor-multiple-vps-servers)
 	
