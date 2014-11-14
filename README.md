@@ -15,7 +15,7 @@ SSH vào máy chủ và thực hiện các lệnh sau:
 
     git clone https://github.com/ducnc/zabbix-2.2.git
 
-    cd zabbix-2.2.git
+    cd zabbix-2.2
 
     bash install-zabbix-server.sh
 
