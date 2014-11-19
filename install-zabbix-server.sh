@@ -89,32 +89,26 @@ cp /usr/share/doc/zabbix-frontend-php/examples/zabbix.conf.php.example /etc/zabb
 
 zabbixconfphp=/etc/zabbix/zabbix.conf.php
 test -f $zabbixconfphp.bka || cp $zabbixconfphp $zabbixconfphp.bka
-x='$DB["SCHEMA"]'
-y='$DB'
-ZBX_SERVER='$ZBX_SERVER'
-ZBX_SERVER_PORT='$ZBX_SERVER_PORT'
-ZBX_SERVER_NAME='$ZBX_SERVER_NAME'
-IMAGE_FORMAT_DEFAULT='$IMAGE_FORMAT_DEFAULT'
 
 cat <<EOF > /etc/zabbix/zabbix.conf.php
 <?php
 // Zabbix GUI configuration file
-global $y;
+global \$DB;
 
-$y['TYPE']     = 'MYSQL';
-$y['SERVER']   = 'localhost';
-$y['PORT']     = '3306';
-$y['DATABASE'] = '$Zabbix_db';
-$y['USER']     = '$Zabbix_user';
-$y['PASSWORD'] = '$Zabbix_pass';
+\$DB['TYPE']     = 'MYSQL';
+\$DB['SERVER']   = 'localhost';
+\$DB['PORT']     = '3306';
+\$DB['DATABASE'] = '$Zabbix_db';
+\$DB['USER']     = '$Zabbix_user';
+\$DB['PASSWORD'] = '$Zabbix_pass';
 
 // SCHEMA is relevant only for IBM_DB2 database
-$x               = '';
-$ZBX_SERVER      = 'localhost';
-$ZBX_SERVER_PORT = '10051';
-$ZBX_SERVER_NAME = '';
+\$DB["SCHEMA"]    = '';
+\$ZBX_SERVER      = 'localhost';
+\$ZBX_SERVER_PORT = '10051';
+\$ZBX_SERVER_NAME = '';
 
-$IMAGE_FORMAT_DEFAULT = IMAGE_FORMAT_PNG;
+\$IMAGE_FORMAT_DEFAULT = IMAGE_FORMAT_PNG;
 ?>
 EOF
 
