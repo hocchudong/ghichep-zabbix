@@ -78,7 +78,7 @@ test -f $apacheconf.bka || cp $apacheconf $apacheconf.bka
 sed -i 's/post_max_size = 8M/post_max_size = 16M/g' $apacheconf
 sed -i 's/max_execution_time = 30/max_execution_time = 300/g' $apacheconf
 sed -i 's/max_input_time = 60/max_input_time = 300/g' $apacheconf
-sed -i 's/;date.timezone =/date.timezone = UTC/g' $apacheconf
+sed -i 's\;date.timezone =\date.timezone = Asia/Ho_Chi_Minh\g' $apacheconf
 
 #cd
 cp /usr/share/doc/zabbix-frontend-php/examples/zabbix.conf.php.example /etc/zabbix/zabbix.conf.php
