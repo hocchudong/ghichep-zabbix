@@ -13,7 +13,7 @@ SSH vào máy chủ và thực hiện các lệnh sau:
 
     apt-get install git -y
 
-    git clone https://github.com/ducnc/zabbix-2.2.git
+    git clone https://github.com/hocchudong/zabbix-2.2.git
 
     cd zabbix-2.2
 
