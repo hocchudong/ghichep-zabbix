@@ -10,6 +10,8 @@ import datetime
 import tabulate
 
 IP_CON = '172.16.69.180' #Khai bao IP endpoint node Controller
+INTERVAL = 10 #Khai bao khoang thoi gian lay thong so network may ao (ke tu luc chay script)
+TRIGGER = 80  #Khai bao nguong bandwidth can lay (> TRIGGER)
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -54,11 +56,11 @@ def get_instance(token):
     li = []
     try:
         headers = {'X-Auth-Token':token}
-        timestamp_bottom = (datetime.datetime.utcnow() - datetime.timedelta(minutes=10)).isoformat()
+        timestamp_bottom = (datetime.datetime.utcnow() - datetime.timedelta(minutes = INTERVAL)).isoformat()
         response = requests.get(url='http://{0}:8777/v2/meters/network.outgoing.bytes.rate?q.field=timestamp&q.op=ge&q.value={1}'.format(IP_CON, timestamp_bottom), headers=headers)
         r = response.json()
         for i in range(0, len(r)):
-            if r[i]['counter_volume'] >= 80:
+            if r[i]['counter_volume'] >= TRIGGER:
                 instance_id = r[i]['resource_metadata']['instance_id'] 
                 time = r[i]['recorded_at'] 
                 value = r[i]['counter_volume']
