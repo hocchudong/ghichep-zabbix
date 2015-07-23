@@ -3,10 +3,10 @@
 """
 Zabbix SMTP Alert script for gmail.
 """
-
+import argparse
 import sys
 import smtplib
-import table_vms_bandwidth_inbound as tbl
+import table_vms_bandwidth_2direction as tbl
 from email.MIMEText import MIMEText
 from email.Header import Header
 from email.Utils import formatdate
@@ -26,7 +26,10 @@ SMTP_TLS = True
 
 def send_mail(recipient, subject, body, encoding='utf-8'):
     session = None
-    table = tbl.main()
+    if 'inbound' in body:
+        table = tbl.main('inbound')
+    elif 'outbound' in body:
+        table = tbl.main('outbound')
     bd = body + '\n\n\n\n' + table
     msg = MIMEText(bd, 'plain', encoding)
    # msg = MIMEText(table, 'plain', encoding)
@@ -55,13 +58,17 @@ if __name__ == '__main__':
     subject = sys.argv[2]
     body = sys.argv[3]
     """
- #   tb = tbl.main()
-    if len(sys.argv) == 4:
-        send_mail(
-            recipient=sys.argv[1],
-            subject=sys.argv[2],
-            body=sys.argv[3])
-    else:
-        print u"""requires 3 parameters (recipient, subject, body)
-\t$ zabbix-gmail.sh recipient subject body
-"""
+    argp = argparse.ArgumentParser(description='Lay thong tin gui mail')
+    argp.add_argument('recipient', type=str, help='Recipient')
+    argp.add_argument('subject', type=str, help='Subject')
+    argp.add_argument('body', type=str, help='Body')
+    args = argp.parse_args()
+
+    send_mail(
+        recipient=args.recipient,
+        subject=args.subject,
+        body=args.body)
+#     else:
+#         print u"""requires 3 parameters (recipient, subject, body)
+# \t$ zabbix-gmail.sh recipient subject body
+# """
