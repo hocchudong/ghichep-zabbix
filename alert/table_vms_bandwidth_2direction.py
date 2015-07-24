@@ -10,7 +10,7 @@ import tabulate
 
 IP_CON = '172.16.1.100' #Khai bao IP endpoint node Controller
 INTERVAL = 10 #Khai bao khoang thoi gian lay thong so network may ao (ke tu luc chay script)
-TRIGGER = 80  #Khai bao nguong bandwidth can lay (> TRIGGER)
+TRIGGER = 1  #Khai bao nguong bandwidth can lay (Mbps) (> TRIGGER)
 ADMIN_ID='702f594aceac404687f213abacd33e52' #Khai bao ID cua admin project
 
 logging.basicConfig(
@@ -63,12 +63,11 @@ def get_instance(token,direction):
           response = requests.get(url='http://{0}:8777/v2/meters/network.outgoing.bytes.rate?q.field=timestamp&q.op=ge&q.value={1}'.format(IP_CON, timestamp_bottom), headers=headers)
         r = response.json()
         for i in range(0, len(r)):
-            if r[i]['counter_volume'] >= TRIGGER:
+            val = float(r[i]['counter_volume'])*8/1000000
+            if val >= TRIGGER:
                 instance_id = r[i]['resource_metadata']['instance_id'] 
                 time = r[i]['recorded_at'] 
-                val = float(r[i]['counter_volume'])
-                value = value = ("{0:.5f}".format(round(val,2)))
-#                project_id = r[i]['project_id']
+                value = ("{0:.5f}".format(round(val,2)))
                 exist_vms = [['a','b']]
                 for j in exist_vms:
                     if instance_id == j[1]:
