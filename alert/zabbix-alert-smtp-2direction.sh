@@ -26,10 +26,12 @@ SMTP_TLS = True
 
 def send_mail(recipient, subject, body, encoding='utf-8'):
     session = None
-    if 'inbound' in body:
+    if 'inbound' in body and 'Network node' in body:
         table = tbl.main('inbound')
-    elif 'outbound' in body:
+    elif 'outbound' in body and 'Network node' in body:
         table = tbl.main('outbound')
+    else:
+        table = None
     bd = body + '\n\n\n\n' + table
     msg = MIMEText(bd, 'plain', encoding)
    # msg = MIMEText(table, 'plain', encoding)
