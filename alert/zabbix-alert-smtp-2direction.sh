@@ -14,6 +14,7 @@ from email.Utils import formatdate
 # Mail Account
 MAIL_ACCOUNT = 'thienha3110@gmail.com'
 MAIL_PASSWORD = '19912009'
+NETWORK_NODE = 'Network node' #Khai bao hostname cua Network Node
 
 # Sender Name
 SENDER_NAME = u'Zabbix Alert'
@@ -26,9 +27,9 @@ SMTP_TLS = True
 
 def send_mail(recipient, subject, body, encoding='utf-8'):
     session = None
-    if 'inbound' in body and 'Network node' in body:
+    if 'inbound' in body and NETWORK_NODE in body:
         table = tbl.main('inbound')
-    elif 'outbound' in body and 'Network node' in body:
+    elif 'outbound' in body and NETWORK_NODE in body:
         table = tbl.main('outbound')
     else:
         table = None
