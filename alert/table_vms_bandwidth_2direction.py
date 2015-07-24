@@ -12,6 +12,7 @@ IP_CON = '172.16.1.100' #Khai bao IP endpoint node Controller
 INTERVAL = 10 #Khai bao khoang thoi gian lay thong so network may ao (ke tu luc chay script)
 TRIGGER = 1  #Khai bao nguong bandwidth can lay (Mbps) (> TRIGGER)
 ADMIN_ID='702f594aceac404687f213abacd33e52' #Khai bao ID cua admin project
+ADMIN_PASS = 'Welcome123' #Khai bao admin password
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -26,7 +27,7 @@ def get_token():
          "tenantName": "admin",
          "passwordCredentials": {
                   "username": 'admin',
-                  "password": "Welcome123"
+                  "password": ADMIN_PASS
            }
                   }
           }
