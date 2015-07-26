@@ -8,13 +8,14 @@ import sys
 import smtplib
 import table_vms_bandwidth_2direction as tbl
 from email.MIMEText import MIMEText
+from email.mime.multipart import MIMEMultipart
 from email.Header import Header
 from email.Utils import formatdate
 
 # Mail Account
 MAIL_ACCOUNT = 'thienha3110@gmail.com'
 MAIL_PASSWORD = '19912009'
-NETWORK_NODE = 'Network node' #Khai bao hostname cua Network Node
+NETWORK_NODE = 'Network node' #Khai bao host cua Network Node tren Zabbix Server
 
 # Sender Name
 SENDER_NAME = u'Zabbix Alert'
@@ -33,13 +34,18 @@ def send_mail(recipient, subject, body, encoding='utf-8'):
         table = tbl.main('outbound')
     else:
         table = ''
-    bd = body + '\n\n\n\n' + table
+    bd = body + '\n\n\n\n'
     msg = MIMEText(bd, 'plain', encoding)
    # msg = MIMEText(table, 'plain', encoding)
+    msg = MIMEMultipart("test")
+    msg1 = MIMEText(bd, 'plain', encoding)
+    msg2 = MIMEText(table, 'html', encoding)
     msg['Subject'] = Header(subject, encoding)
     msg['From'] = Header(SENDER_NAME, encoding)
     msg['To'] = recipient
     msg['Date'] = formatdate()
+    msg.attach(msg1)
+    msg.attach(msg2)
     try:
         session = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
         if SMTP_TLS:
