@@ -6,6 +6,7 @@ import json
 import logging
 import requests
 import datetime
+import dateutil.parser
 import tabulate
 
 IP_CON = '172.16.1.100' #Khai bao IP endpoint node Controller
@@ -67,7 +68,8 @@ def get_instance(token,direction):
             val = float(r[i]['counter_volume'])*8/1000000
             if val >= TRIGGER:
                 instance_id = r[i]['resource_metadata']['instance_id'] 
-                time = r[i]['recorded_at'] 
+                t = r[i]['recorded_at']
+                time = (dateutil.parser.parse(t) + datetime.timedelta(minutes = 420)).isoformat()
                 value = ("{0:.5f}".format(round(val,2)))
                 exist_vms = [['a','b']]
                 for j in exist_vms:
