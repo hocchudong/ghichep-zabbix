@@ -69,7 +69,7 @@ def get_instance(token,direction):
             if val >= TRIGGER:
                 instance_id = r[i]['resource_metadata']['instance_id'] 
                 t = r[i]['recorded_at']
-                time = (dateutil.parser.parse(t) + datetime.timedelta(minutes = 420)).isoformat()
+                time = (dateutil.parser.parse(t) + datetime.timedelta(minutes = 420)).replace(microsecond=0).isoformat()
                 value = ("{0:.5f}".format(round(val,2)))
                 exist_vms = [['a','b']]
                 for j in exist_vms:
