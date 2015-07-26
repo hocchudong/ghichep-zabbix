@@ -93,7 +93,7 @@ def table(li):
         for i in range(0, len(li)):
             instance = li[i]
             x.append([instance[0], instance[1], instance[2],instance[3],instance[4]]) 
-        tab = tabulate.tabulate(x, headers=['Host', 'Instance_ID ', 'Instance_Name ', 'Value (Mbps)  ', 'Time '], tablefmt='orgtbl')
+        tab = tabulate.tabulate(x, headers=['Host', 'Instance_ID ', 'Instance_Name ', 'Value (Mbps)  ', 'Time '], tablefmt='html')
         return tab
     except Exception as e:
         loger.critical(e)
