@@ -16,7 +16,7 @@ from email.Utils import formatdate
 MAIL_ACCOUNT = 'thienha3110@gmail.com'
 MAIL_PASSWORD = '19912009'
 NETWORK_NODE = 'Network node' #Khai bao host cua Network Node tren Zabbix Server
-
+COMPUTE_NODE = 'Compute' #Khai bao hostname chung cua node Compute tren Zabbix
 # Sender Name
 SENDER_NAME = u'Zabbix Alert'
 
@@ -28,9 +28,9 @@ SMTP_TLS = True
 
 def send_mail(recipient, subject, body, encoding='utf-8'):
     session = None
-    if 'inbound' in body and NETWORK_NODE in body:
+    if 'Network inbound' in body and NETWORK_NODE in body or COMPUTE_NODE in body:
         table = tbl.main('inbound')
-    elif 'outbound' in body and NETWORK_NODE in body:
+    elif 'Network outbound' in body and NETWORK_NODE in body or COMPUTE_NODE in body:
         table = tbl.main('outbound')
     else:
         table = ''
