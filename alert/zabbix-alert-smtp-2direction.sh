@@ -32,7 +32,7 @@ def send_mail(recipient, subject, body, encoding='utf-8'):
     elif 'outbound' in body and NETWORK_NODE in body:
         table = tbl.main('outbound')
     else:
-        table = None
+        table = ''
     bd = body + '\n\n\n\n' + table
     msg = MIMEText(bd, 'plain', encoding)
    # msg = MIMEText(table, 'plain', encoding)
