@@ -28,10 +28,12 @@ SMTP_TLS = True
 
 def send_mail(recipient, subject, body, encoding='utf-8'):
     session = None
-    if 'Network inbound' in body and NETWORK_NODE in body or COMPUTE_NODE in body:
-        table = tbl.main('inbound')
-    elif 'Network outbound' in body and NETWORK_NODE in body or COMPUTE_NODE in body:
-        table = tbl.main('outbound')
+    if 'Network inbound'  and 'PROBLEM' in body:
+        if NETWORK_NODE or COMPUTE_NODE in body:
+            table = tbl.main('inbound')
+    elif 'Network outbound' and COMPUTE_NODE in body:
+        if NETWORK_NODE or COMPUTE_NODE in body:
+            table = tbl.main('outbound')
     else:
         table = ''
     bd = body + '\n\n\n\n'
