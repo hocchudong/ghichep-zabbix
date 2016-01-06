@@ -18,5 +18,5 @@ Trước khi tạo Graph, ta cần xác định được Graph được tạo s�
   * Line chart : Thường dùng để biểu diễn các dạng như CPU load, Memory Usage, Network traffic on ethernet...
      Ví dụ về tạo Graph biểu diễn Network Traffic trên card eth0 :
       Step 1 : Xác định thông số cần giám sát, ở đây ta sẽ giám sát traffic incoming và outgoing trên eth0
-      <img src="http://i.imgur.com/LvEgvWO.png">
+      <img src="http://i.imgur.com/5s9ppql.png">
   
