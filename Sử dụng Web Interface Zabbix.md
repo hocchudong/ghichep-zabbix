@@ -3,16 +3,16 @@
   <li>[1. Tạo Graph và Screen ](#graphvascreen)</li>
   <li>[2. Thêm Item cho Template](#themitem)</li>
   
+  .
+  
+  
+  
+  .
   
   
   
   
-  
-  
-  
-  
-  
-  
+  .
   
 
 ####1. Tạo Graph và Screen
