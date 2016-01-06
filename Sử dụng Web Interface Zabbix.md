@@ -25,8 +25,10 @@ Ví dụ : Thêm item giảm sát các content free, used, cached, buffer của 
 
 2 : Chọn type cho Item
 
-3 : Chọn key cho Item, ở đây ta chọn key với memory như hình :
+3 : Chọn key cho Item, ở đây ta chọn key với memory như hình  :
   <img src="http://i.imgur.com/nYBlIOo.png">
+  
+  Chú ý thay <mode> với các paramater phù hợp của memory, tham khảo link sau : https://www.zabbix.com/documentation/2.0/manual/appendix/items/vm.memory.size_params
   
 4 : Chọn đơn vị cho Item ( B = Byte )
 
