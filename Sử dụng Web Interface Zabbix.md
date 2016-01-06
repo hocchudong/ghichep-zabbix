@@ -9,6 +9,10 @@
 
 ###1. Tạo Item cho Template
 
+Khi muốn giám sát những thông số của host mà không có sẵn trong template, ví dụ như từng content của RAM như free, used, cached, buffers... thì cần phải tự thêm vào item. 
+Ví dụ : Thêm item giảm sát các content free, used, cached, buffer của RAM.
+
+* Step 1 : 
 
 
 
