@@ -10,9 +10,23 @@
 ###1. Tạo Item cho Template
 
 Khi muốn giám sát những thông số của host mà không có sẵn trong template, ví dụ như từng content của RAM như free, used, cached, buffers... thì cần phải tự thêm vào item. 
-Ví dụ : Thêm item giảm sát các content free, used, cached, buffer của RAM.
+Ví dụ : Thêm item giảm sát các content free, used, cached, buffer của RAM cho Template của OS Linux 
 
 * Step 1 : 
+<img src=" http://i.imgur.com/dI35OEL.png">
+* Step 2 : Chọn OS Linux
+<img src="http://i.imgur.com/J05Lc4e.png">
+* Step 3 : Create Item
+<img stc="http://i.imgur.com/HZyb6RR.png">
+* Step 4 : Tạo Item như các bước sau :
+<img src="http://i.imgur.com/GxE42kk.png">
+1 : Đặt tên cho Item
+2 : Chọn type cho Item
+3 : Chọn key cho Item, ở đây ta chọn key với memory như hình :
+  <img src="http://i.imgur.com/nYBlIOo.png">
+4 : Chọn đơn vị cho Item ( B = Byte )
+5 : Chọn Application cho Item
+6 : Sau khi hoàn thành, ấn Save để lưu item.
 
 
 
