@@ -30,7 +30,7 @@ Ví dụ : Thêm item giảm sát các content free, used, cached, buffer của 
   
   Chú ý thay <mode> với các paramater phù hợp của memory, tham khảo link sau : https://www.zabbix.com/documentation/2.0/manual/appendix/items/vm.memory.size_params
   
-4 : Chọn đơn vị cho Item ( B = Byte )( Chọn "Use custom multiplier" khi muốn convert sang loại dữ liệu MB khi lưu lượng > 1014Byte )
+4 : Chọn đơn vị cho Item ( B = Byte ) ( Chọn "Use custom multiplier" khi muốn convert sang loại dữ liệu MB khi lưu lượng > 1024Byte )
 
 5 : Chọn Application cho Item
 
