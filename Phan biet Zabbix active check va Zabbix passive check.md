@@ -47,6 +47,8 @@ Cấu hình Zabbix Passive check :
 - Nội dung gói tin "Agent Request" : <img src="http://i.imgur.com/dK9q6VR.png">
 - Nội dung gói tin "Agent Response" : <img src="http://i.imgur.com/romONxJ.png">
 - Chú ý : Để sử dụng Active Item, cần cấu hình Server Active trên file cấu hình zabbix_agentd.conf : <img src="http://i.imgur.com/BZQWm9p.png">
+- 
 #### Một số chú ý nhỏ 
+
 - Với Passive item, có thể tùy chỉnh interval time linh hoạt hơn, mỗi item có thể cấu hình interval khác nhau. Trong khi với Active Item, interval time bị fix cứng trong file zabbix_agentd.conf : <img src="http://i.imgur.com/VwgMkzD.png">
  
