@@ -16,9 +16,9 @@ Cấu hình Zabbix Passive check :
 
 - Đây là kiểu kiểm tra tương ứng với Item Active (chủ động), đặc tính của kiểu này là công việc chủ động request thông tin cần giám sát thuộc về Zabbix Agent. Kiểu kiếm tra này hay dùng khi Zabbix Server không thể kết nối trực tiếp đến Zabbix Agent (có thể do chính sách firewall...)
 - Zabbix Agent sẽ chủ động gửi request đến Zabbix Server nhằm lấy thông tin về các Item được Server chỉ định sẵn. Sau khi lấy được danh sách item thì Agent sẽ xử lý động lập rồi gửi tuần tự thông tin về cho Server. Server sẽ không khởi tạo kết nối nào mà chỉ trả lời request item list và nhận lại thông tin được trả về. Tuy nhiên nếu Agent trei hoặc chết thì Server sẽ không nhận được bất kỳ kết nối nào.
-- <img src="http://i.imgur.com/XUpbj9S.png">
-- Cấu hình sử dụng Zabbix Active Check :
-- <img src="http://i.imgur.com/Af1hr8I.png">
+ <img src="http://i.imgur.com/XUpbj9S.png">
+ Cấu hình sử dụng Zabbix Active Check :
+ <img src="http://i.imgur.com/Af1hr8I.png">
   + 1 : Zabbix agent (active) = Zabbix Active Item 
   + 2 : Key tương ứng với kiểu Active
-- 
+ 
