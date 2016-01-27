@@ -34,4 +34,4 @@ Cấu hình Zabbix Passive check :
  +  Agent nhận ưu cầu, phân tích, thu thập dữ liệu và gửi trả về Server. Với item "agent.ping", kết quả trả về ở đây sẽ là "0" hoặc "1".
  +  Kết nối TCP đóng lại
 
- -  Nội dung gói tin "Server request"
+-  Nội dung gói tin "Server request"
