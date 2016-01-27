@@ -9,7 +9,9 @@ Như chúng ta đã được biết, Zabbix server thu thập thông tin từ Ag
 <img src="http://i.imgur.com/Qa03yHR.png">
 
 Cấu hình Zabbix Passive check : 
+
 <img src="http://i.imgur.com/gupW4It.png">
+
   + 1 : Kiểu Item ( Zabbix agent = Zabbix Passive Item )
   + 2 : Key tương ứng với kiểu Passive
   
