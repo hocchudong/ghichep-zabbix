@@ -26,4 +26,5 @@ Cấu hình Zabbix Passive check :
   
 ###3. Một số phân tích sâu và một vài lưu ý nhỏ.
 ####3.1 Tiến trình trao đổi dữ liệu 
+ 
 
