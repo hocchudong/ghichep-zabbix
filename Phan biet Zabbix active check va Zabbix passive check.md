@@ -27,11 +27,23 @@ Cấu hình Zabbix Passive check :
 ###3. Một số phân tích sâu và một vài lưu ý nhỏ.
 ####3.1 Tiến trình trao đổi dữ liệu 
 
-#### Passive check
-- Tiến trình
+#### Passive Check
+- Tiến trình :
  +  Server mở kết nối TCP đến Zabbix Agent
  +  Server gửi ưu cầu thu thập thông tin với item tương ứng. Ví dụ : "agent.ping"
  +  Agent nhận ưu cầu, phân tích, thu thập dữ liệu và gửi trả về Server. Với item "agent.ping", kết quả trả về ở đây sẽ là "0" hoặc "1".
  +  Kết nối TCP đóng lại
 
--  Nội dung gói tin "Server request"
+-  Nội dung gói tin "Server request" : <img src="http://i.imgur.com/Z2zML84.png">
+-  Nội dung gói tin "Agent response" : <img src="http://i.imgur.com/b9TpJSI.png">
+
+#### Active Check
+- Tiến trình : 
+  + Agent mở kết nối TCP đến Zabbix Server
+  + Agent yêu cầu danh sách item cần thu thập
+  + Server phản hồi với danh sách item tương ứng ( danh sách này đã được định sẵn trước đó, gồm item key, delay).
+  + Kết nối TCP đóng lại.
+  + Agent bắt đầu thu thập thông tin tương ứng với danh sách item nhận được.
+- Nội dung gói tin "Agent Request" : <img src="http://i.imgur.com/dK9q6VR.png">
+- Nội dung gói tin "Agent Response" : <img src="http://i.imgur.com/romONxJ.png">
+ 
