@@ -12,6 +12,7 @@ Cấu hình Zabbix Passive check :
 <img src="http://i.imgur.com/gupW4It.png">
   + 1 : Kiểu Item ( Zabbix agent = Zabbix Passive Item )
   + 2 : Key tương ứng với kiểu Passive
+  + 
 ####2. Zabbix Active Check là gì?
 
 - Đây là kiểu kiểm tra tương ứng với Item Active (chủ động), đặc tính của kiểu này là công việc chủ động request thông tin cần giám sát thuộc về Zabbix Agent. Kiểu kiếm tra này hay dùng khi Zabbix Server không thể kết nối trực tiếp đến Zabbix Agent (có thể do chính sách firewall...)
