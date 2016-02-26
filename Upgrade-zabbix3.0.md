@@ -19,6 +19,7 @@ root@manh-zabbix:~# dpkg -i zabbix-frontend-php_3.0.0-1+trusty_all.deb
 ##### Bước 2 : Restart dịch vụ
 
   root@manh-zabbix:~# service zabbix-server restart
+  
   root@manh-zabbix:~# service apache2 restart
 
 ##### Bước 3 : Đăng nhập giao diện Web như bình thường
