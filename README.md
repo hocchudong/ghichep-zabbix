@@ -1,39 +1,11 @@
-zabbix-2.2
-==========
+#Nơi ghi chép các vấn đề nói chung về  Zabbix!
+Người tổng hợp : Manhdv
 
-Trong bài viết này tôi sẽ hướng dẫn các bạn cài đặt và cấu hình zabbix - một công cụ để monitor.
-
-Yêu cầu với máy chủ cài Zabbix server: Ubuntu 14.04
-
-## 1. Cài đặt zabbix server
-
-SSH vào máy chủ và thực hiện các lệnh sau:
-
-    apt-get update
-
-    apt-get install git -y
-
-    git clone https://github.com/hocchudong/zabbix-2.2.git
-
-    cd zabbix-2.2
-
-    bash install-zabbix-server.sh
-
-Sau khi cài đặt thành công, mở trình duyệt web tại địa chỉ http://$IP_Zabbix_server/zabbix
-	
-	user: admin
-	
-	password: zabbix
-	
-## 2. Thêm host để giám sát
-	
-Tham khảo [link sau] (http://tecadmin.net/add-host-zabbix-server-monitor/)
-	
-## 3. Cấu hình gửi mail cảnh báo
-
-## 4. Cấu hình gửi SMS cảnh báo	
-	
-## Tham khảo
-	
-[Digital Ocean] (https://www.digitalocean.com/community/tutorials/how-to-install-zabbix-on-ubuntu-configure-it-to-monitor-multiple-vps-servers)
-	
+## Mục lục 
+  - [1 Zabbix Script](https://github.com/hocchudong/ghichep-zabbix/tree/master/Zabbix%20Scripts)
+  
+  - [2 Zabbix](https://github.com/hocchudong/ghichep-zabbix/tree/master/Zabbix)
+    - [2.1 Zabbix Web-Interface](https://github.com/hocchudong/ghichep-zabbix/blob/master/Zabbix/S%E1%BB%AD%20d%E1%BB%A5ng%20Web%20Interface%20Zabbix.md)
+    - [2.2 Active Check và Passive Check trong Zabbix](https://github.com/manhdinh/ghichep-zabbix/blob/master/Zabbix/Phan%20biet%20Zabbix%20active%20check%20va%20Zabbix%20passive%20check.md)
+    - [2.3 Upgrade Zabbix 3.0](https://github.com/manhdinh/ghichep-zabbix/blob/master/Zabbix/Upgrade-zabbix3.0.md)
+  - [3 Alert](https://github.com/manhdinh/ghichep-zabbix/tree/master/alert)  
