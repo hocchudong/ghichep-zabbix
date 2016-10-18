@@ -13,8 +13,8 @@ from email.Header import Header
 from email.Utils import formatdate
 
 # Mail Account
-MAIL_ACCOUNT = 'thienha3110@gmail.com'
-MAIL_PASSWORD = '19912009'
+MAIL_ACCOUNT = ''
+MAIL_PASSWORD = ''
 NETWORK_NODE = 'Network node' #Khai bao host cua Network Node tren Zabbix Server
 COMPUTE_NODE = 'Compute' #Khai bao hostname chung cua node Compute tren Zabbix
 # Sender Name
