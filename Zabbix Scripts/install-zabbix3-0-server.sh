@@ -7,7 +7,7 @@
 #############################################################
 # Run with root account  
 # wget 
-# bash zabbix-server.sh
+# bash install-zabbix3-0-server.sh
 # Wait ....and here we go :)
 
 ###############################
