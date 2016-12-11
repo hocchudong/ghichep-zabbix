@@ -33,3 +33,6 @@ User name và password đăng nhập mặc định :
 	user: Admin
 	
 	password: zabbix
+	
+Script cài đặt trên client :
+	- [Trên Ubuntu](https://github.com/manhdinh/ghichep-zabbix/blob/master/Zabbix%20Scripts/install-zabbix-ubuntu-client.sh)
