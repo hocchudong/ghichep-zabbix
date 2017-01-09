@@ -17,7 +17,7 @@ read hostname
 
 #Cai dat zabbix-client
 apt-get update
-apt-get install zabbix-aget
+apt-get install zabbix-agent
 
 #Sua file cau hinh
 
