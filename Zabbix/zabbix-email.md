@@ -47,8 +47,6 @@ Chọn Type là `Email-alert`, điền email nhận cảnh báo và chọn các 
 
 ![email](/images/email-07.png)
 
-![email](/images/email-07.png)
-
  -	Tạo Action, mỗi khi có đủ điều kiện trong Action được tạo, cảnh báo sẽ được gửi đi.
 
 ![email](/images/email-08.png)
