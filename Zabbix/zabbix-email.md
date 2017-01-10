@@ -16,7 +16,7 @@ cat /etc/zabbix/zabbix_server.conf | grep alert
 ```sh
 wget https://gist.githubusercontent.com/superdaigo/3754055/raw/e28b4b65110b790e4c3e4891ea36b39cd8fcf8e0/zabbix-alert-smtp.sh
 ```
- - Thay các thông số bằng **gmail** và password dùng để xác thực 
+ - Thay các thông số bằng thông tin gmail dùng để xác thực, 
  
 ![email](/images/email-01.png)
 
